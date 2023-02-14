@@ -7,7 +7,7 @@
 
 This guide is a fantastic follow up to the previous "Serve a static site in an S3 bucket", it addresses some of the shortcomings and issues around hosting a static website out of S3 natively.
 
-The required steps are a little more in-depth than the previous guide, and this guide assumes you already have a static site being served up via S3 on AWS. The assumption stands that you also have your DNS hosted zone configured on Route53. 
+The required steps are a little more in-depth than the previous guide, and this guide assumes you already have a static site being served up via S3 on AWS. The assumption stands that you also have your DNS hosted zone configured on Route 53. 
 
 You will need a couple of things to configure the architecture for this article:
 
@@ -53,7 +53,7 @@ We are going to use a method for specifying what's called an alternate DNS name 
 * The next screen that comes up in this tab will note the request has been successful and you'll need to click "View certificate" at the top to get the information needed for DNS validation. Go ahead and click "View certification" as shown
 
 ![CloudFront distribution setup 6](./artifacts/cf_dist_07.jpg)
-* At this point still in the same tab you'll be brought to a screen that shows the certificate is still pending validation. For each CNAME you configure on the certificate you will need to create a CNAME record in Route53. There is a link to create the CNAME records in Route53 as shown below ("Create records in Route 53"), click the button and it will prompt you that AWS will create the records on your behalf. Simply hit "Create records"
+* At this point still in the same tab you'll be brought to a screen that shows the certificate is still pending validation. For each CNAME you configure on the certificate you will need to create a CNAME record in Route 53. There is a link to create the CNAME records in Route 53 as shown below ("Create records in Route 53"), click the button and it will prompt you that AWS will create the records on your behalf. Simply hit "Create records"
 
 ![CloudFront distribution setup 7](./artifacts/cf_dist_08.jpg)
 * Once this is done, it will take a little bit of time. On the AWS Certificate Manager configuration panel you can refresh the certificate status. For me it took about two minutes, but the "Pending validation" status did eventually change to "Issued" as shown below. The certificate is now ready to be used.

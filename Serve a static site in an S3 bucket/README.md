@@ -8,16 +8,16 @@
 This is a pretty simple tutorial to get you up and running serving a static website out of an S3 bucket on Amazon Web Services (AWS)! You will need a couple of things to accomplish this:
 
 1. Be sure you have an AWS account. It could be a production account, test, dev, whatever you please. Best to not implement anything in a production account until you're comfortable with the process, but any AWS account will do.
-2. You WILL need a registered domain name and the DNS zone MUST be hosted on Route53. You could register the DNS elsewhere and then host your zone on AWS but that's outside the scope of this roblog entry. This guide assumes you have registered a domain name on AWS Route53 and also have the DNS hosted zone configured there as well.
+2. You WILL need a registered domain name and the DNS zone MUST be hosted on Route 53. You could register the DNS elsewhere and then host your zone on AWS but that's outside the scope of this roblog entry. This guide assumes you have registered a domain name on AWS Route 53 and also have the DNS hosted zone configured there as well.
 
 The purpose of this guide is to walk through the setup of a static website using S3 website endpoints in Amazon Web Services. "Static" is a bit of a misnomer in this context, for many people static means non-interactive, no movement, etc, but this is not the case with a web site. Static in this case simply means there's no dynamic allocation of assets, no server side computation, no ability to interface with a back end (natively). However, anything that can run client side (JavaScript, HTML and CSS primarily) *can* interact with web elements and the DOM which will allow for a very rich, interactive user experience.  
 
 ## How-To
-As above, please *please* make sure you have already registered a domain name and will be hosting the DNS on Route53. This is absolutely imperative since Route53 will be calling the resource in a way that will only work from within AWS hosted DNS (rather than the typical IP reference setup it will use an Alias A record which is AWS specific for pointing to AWS resources and services).
+As above, please *please* make sure you have already registered a domain name and will be hosting the DNS on Route 53. This is absolutely imperative since Route 53 will be calling the resource in a way that will only work from within AWS hosted DNS (rather than the typical IP reference setup it will use an Alias A record which is AWS specific for pointing to AWS resources and services).
 * Log into the AWS console for the account you will be setting this up on. For the purposes of this guide I will be using my personal AWS account with a portfolio website I'd like to set up *(iammane.link)*
-* Click in to Route53 to ensure your domain and hosted zone are configured as such (crucially, you want to ensure there is a "NS" type DNS record and "SOA" (these SHOULD be populated by default just by nature of registering a domain and setting up a hosted zone on Route53).
+* Click in to Route 53 to ensure your domain and hosted zone are configured as such (crucially, you want to ensure there is a "NS" type DNS record and "SOA" (these SHOULD be populated by default just by nature of registering a domain and setting up a hosted zone on Route 53).
 
-![Route53 initial settings](./artifacts/s3_site_01.jpg)
+![Route 53 initial settings](./artifacts/s3_site_01.jpg)
 * Move over to the S3 console and create two buckets for your site. The bucket names should match the domain you are working with (again, in this example, *iammane.link*). You will want to create two buckets - one will be the same name as your domain, the other will be www.yourdomain.com (this is used later for a redirect). **Note: All defaults for other settings are ok as is for now. We'll make adjustments to the bucket policy later, but for now just get these buckets made**.
 
 ![iammane.link bucket](./artifacts/s3_site_02.jpg)
@@ -69,7 +69,7 @@ The above will allow ALL principals to have s3:GetObject rights over the bucket 
 
 ![iammane.link and www.iammane.link difference](./artifacts/s3_site_10.jpg)
 * **PERFORM THE SAME STEPS FOR YOUR WWW BUCKET! This includes turning off the "Block public access (bucket settings)" check mark and the addition of the bucket policy to your www.yourdomain.com bucket!**
-* Once both of your buckets have been configured with the bucket policy to allow anonymous read access we need to make our final changes to Route53. Click into the Route53 console and open up the hosted zone for your domain name (in my case, *iammane.link*).
+* Once both of your buckets have been configured with the bucket policy to allow anonymous read access we need to make our final changes to Route 53. Click into the Route 53 console and open up the hosted zone for your domain name (in my case, *iammane.link*).
 * We will need to create two A records for our buckets, they are going to point to the S3 website endpoints we configured earlier. Start by clicking on "Create record"
 
 ![iammane.link hosted zone create record](./artifacts/s3_site_11.jpg)
@@ -97,7 +97,7 @@ This was a lot of steps, but let's quickly summarize what we accomplished:
 3. Set up static web hosting on both buckets, using the www one as a redirect to your main content bucket.
 4. Disabled the block public access setting on both buckets.
 5. Configured both buckets with an open-ended, anonymous public access read policy.
-6. Configured Route53 DNS A records to point to the alias S3 website endpoints for the buckets.
+6. Configured Route 53 DNS A records to point to the alias S3 website endpoints for the buckets.
 
 ## Important notes and limitations
 
