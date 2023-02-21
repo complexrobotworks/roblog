@@ -10,5 +10,5 @@ Enjoy!
 
 Upcoming topics (maybe!):
 
-1. Creating a serverless contact form on a static website using AWS Lambda and SES (haven't quite cracked into this yet but found something maybe promising).
+1. Creating a serverless contact form on a static website using AWS Lambda and SES (haven't quite cracked into this yet but found something maybe promising) - (2/20/23 - Got it working! Now I just need to let it simmer, clean it up a whole mess, have a nicely designed working example and then document it 🤪)
 2. Hosting WordPress on AWS in a self managed capacity (to be fair, I have no idea what the costs are behind this one, but it's something I've been thinking about looking into). 
