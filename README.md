@@ -10,4 +10,4 @@ Enjoy!
 
 Upcoming topics (maybe!):
 
-1. Hosting WordPress on AWS in a self managed capacity (to be fair, I have no idea what the costs are behind this one, but it's something I've been thinking about looking into). 
+1. tbd! The WordPress one is in progress.
