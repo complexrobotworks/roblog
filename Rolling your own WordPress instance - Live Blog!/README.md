@@ -109,6 +109,12 @@ There is still a lot of foundational stuff we need to work out before we can rea
 
 Be well everyone. Be back soon!
 
+## April 2nd, 2023
+
+I received my end of month billing statement and it's like a 400% increase from normal... I'm not 100% sure yet, I need more days of data collection, but it seems like even an EC2 instance running WordPress that I've done NOTHING ELSE with costs approximately 40 cents a day? Multiply that by 30 days and we're at around $15 a month... and that's without an ALB for routing traffic to the EC2 instance, without setting up the DNS for it, etc (though I don't anticpate DNS queries would come with any specific cost).
+
+I'm going to keep a close eye on this over the next few days but if this is in fact the running cost for an idle instance I would already say it's not worth going this route... but, stay tuned!
+
 ## Recap
 
 TBD!
