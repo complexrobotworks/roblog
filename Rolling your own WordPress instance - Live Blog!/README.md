@@ -1,7 +1,7 @@
 # Rolling your own WordPress instance - Live Blog!
 
 ## Author: complex robot
-## March 29th, 2023 through X
+## March 29th, 2023 through April 7th, 2023
 
 ## Introduction
 
