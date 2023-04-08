@@ -115,7 +115,7 @@ I received my end of month billing statement and it's like a 400% increase from 
 
 I'm going to keep a close eye on this over the next few days but if this is in fact the running cost for an idle instance I would already say it's not worth going this route... but, stay tuned!
 
-## April 2nd, 2023 - Shut it down!!!
+## April 7th, 2023 - Shut it down!!!
 
 So I haven't hit my budget alert yet, but since I was working on something else in AWS today I thought I'd take a look and see what was going on with this little project. The EC2 instance simply sucking up CPU cycles doing NOTHING is costing 45 cents a day. Bear in mind I haven't configured WP yet, I haven't uploaded any content, I haven't configured the ALB or DNS yet. Nothing, nada. You can see below that at best I'm going to exceed my planned for budget:
 
