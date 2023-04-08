@@ -115,12 +115,26 @@ I received my end of month billing statement and it's like a 400% increase from 
 
 I'm going to keep a close eye on this over the next few days but if this is in fact the running cost for an idle instance I would already say it's not worth going this route... but, stay tuned!
 
+## April 2nd, 2023 - Shut it down!!!
+
+So I haven't hit my budget alert yet, but since I was working on something else in AWS today I thought I'd take a look and see what was going on with this little project. The EC2 instance simply sucking up CPU cycles doing NOTHING is costing 45 cents a day. Bear in mind I haven't configured WP yet, I haven't uploaded any content, I haven't configured the ALB or DNS yet. Nothing, nada. You can see below that at best I'm going to exceed my planned for budget:
+
+![Poptart warmer WP is going to end up busting my budget](./artifacts/wp014.png)
+
+Does it bust it by much? No. But keeping in mind I have literally done nothing with it I can't recommend this as the way to go if you're interested in using WordPress. Larger companies that specialize in this hosting are doing it at scale with things like reserved instances and data cost breaks on quantity and it's something you're just not going to be able to compete with on your own.
+
+That said, there's nothing stopping you from setting up a server at your house and hosting a WordPress site; that is entirely out of scope for this discovery session.
+
 ## Recap
 
-TBD!
+Can you host your own WordPress site on AWS? You sure can. Should you? Yeeeaaahhhhh probably not.
 
 ## Important notes and limitations
 
-TBD!
+I think the key takeaway is that companies that do this on the regular are able to do so at a lower cost to themselves because of the sheer quantity they are hosting. With AWS (and likely most cloud providers) if you prepay and reserve capacity you get a better price, it's all still mostly managed by the cloud provider and you just get a small(er) piece of the pie that you get upcharged for.
 
-March 29th, 2023 - x
+Considering I ultimately have no desire to use WordPress in my site designs this isn't an option I'm going to explore further, I'll stick with S3 hosted sites, but nevertheless, the option is here.
+
+Thanks for sticking around all, hopefully my next project will be something more fruitful (I'm 2 for 2 busts on these last ones).
+
+March 29th, 2023 - April 7th, 2023
