@@ -10,4 +10,4 @@ Enjoy!
 
 Upcoming topics (maybe!):
 
-1. tbd! The WordPress one is in progress.
+1. TinyMCE as a WYSIWYG editor investigation!
