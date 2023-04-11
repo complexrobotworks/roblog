@@ -10,4 +10,4 @@ Enjoy!
 
 Upcoming topics (maybe!):
 
-1. TinyMCE as a WYSIWYG editor investigation!
+1. WYSIWYG editor investigation for AWS deployment!
