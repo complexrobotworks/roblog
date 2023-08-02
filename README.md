@@ -10,5 +10,4 @@ Enjoy!
 
 Upcoming topics (maybe!):
 
-~~1. WYSIWYG editor investigation for AWS deployment!~~
-1. RoboPub web site publishing tool kit
+1. RoboPub web site publishing tool kit (you will see documentation but it is quite half baked! Because nothing exists yet, but I'm still planning on working this out :)
