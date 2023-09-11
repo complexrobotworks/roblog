@@ -129,6 +129,10 @@ That said, there's nothing stopping you from setting up a server at your house a
 
 Can you host your own WordPress site on AWS? You sure can. Should you? Yeeeaaahhhhh probably not.
 
+## September Update!
+
+One other thing I'd like to point out is that this experiment has concluded roughly 5 months ago and I've received approximately 10-15 emails over all these months for newly updated AMIs... this is where the administration piece of the puzzle comes in!! Are they all important updates? Maybe. I don't know! But I do know I don't want to be responsible for constantly watering and feeding Wordpress as a platform! So this is another really important thing to bear in mind!!
+
 ## Important notes and limitations
 
 I think the key takeaway is that companies that do this on the regular are able to do so at a lower cost to themselves because of the sheer quantity they are hosting. With AWS (and likely most cloud providers) if you prepay and reserve capacity you get a better price, it's all still mostly managed by the cloud provider and you just get a small(er) piece of the pie that you get upcharged for.
