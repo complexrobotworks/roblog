@@ -283,7 +283,7 @@ I ended up looking into Google reCAPTCHA for this, it's free for a certain amoun
 
 ![High level serverless contact form architecture](./artifacts/contact01.png)
 
-But we know that we also need to introduce a GCP project for reCAPTCHA (at least through this service), which means we're now running infrastructure and code inside of AWS as well as having a reliance on GCP (with separate crdentials, billing, etc) for reCAPTCHA. This might be kind of a hard sell to a customer - "Oh hi, yes I can do a contact form for you, but in order for it not to cost you a billion dollars you also need to sign up for a GCP account, put your credit card in there too and give me full access so I can set up a GCP project and application for reCAPTCHA". 
+But we know that we also need to introduce a GCP project for reCAPTCHA (at least through this service), which means we're now running infrastructure and code inside of AWS as well as having a reliance on GCP (with separate credentials, billing, etc) for reCAPTCHA. This might be kind of a hard sell to a customer - "Oh hi, yes I can do a contact form for you, but in order for it not to cost you a billion dollars you also need to sign up for a GCP account, put your credit card in there too and give me full access so I can set up a GCP project and application for reCAPTCHA". 
 
 Sounds like it's going to go very well.
 
