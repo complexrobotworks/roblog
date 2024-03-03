@@ -1,4 +1,4 @@
-# Create a serverless contact form (a case study in not re-inventing the wheel)
+# Create a serverless contact form (a case study in not re-inventing the wheel) - Part 1
 
 ## Author: complex robot
 ## March 11th, 2023
